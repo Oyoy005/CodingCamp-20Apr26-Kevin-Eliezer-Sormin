@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TUGAS</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="dashboard">
+    <header class="header">
+      <section class="greeting" aria-labelledby="greeting-title">
+        <h1 id="greeting-title" class="greeting-title">Good Morning</h1>
+        <div class="greeting-details">
+          <time id="current-time" datetime="10:30">10:30</time>
+          <span id="current-date" class="date">Monday, January 1, 2024</span>
+        </div>
+      </section>
+    </header>
+
+    <main class="main-content">
+      <section class="timer-section" aria-labelledby="timer-title">
+        <h2 id="timer-title" class="section-title">Focus Timer</h2>
+        <div class="timer" role="timer" aria-live="polite">
+          <span id="timer-display" class="timer-display">25:00</span>
+          <div class="timer-controls">
+            <button id="timer-start" class="btn btn-primary">Start</button>
+            <button id="timer-stop" class="btn btn-secondary">Stop</button>
+            <button id="timer-reset" class="btn btn-secondary">Reset</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="todo-section" aria-labelledby="todo-title">
+        <h2 id="todo-title" class="section-title">To-Do List</h2>
+        <div class="todo-input">
+          <input type="text" id="task-input" placeholder="Add a new task..." aria-label="Task title">
+          <button id="task-add" class="btn btn-primary">Add</button>
+        </div>
+        <ul id="task-list" class="task-list" role="list" aria-label="Task list">
+          <!-- Tasks will be rendered here -->
+        </ul>
+      </section>
+
+      <section class="quick-links-section" aria-labelledby="links-title">
+        <h2 id="links-title" class="section-title">Quick Links</h2>
+        <div class="links-input">
+          <input type="text" id="link-name" placeholder="Link name (optional)" aria-label="Link name">
+          <input type="url" id="link-url" placeholder="https://example.com" aria-label="Link URL">
+          <button id="link-add" class="btn btn-primary">Add Link</button>
+        </div>
+        <div id="link-error" class="error-message" role="alert" aria-live="assertive"></div>
+        <div id="link-list" class="link-list" role="list" aria-label="Quick links">
+          <!-- Links will be rendered here -->
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
